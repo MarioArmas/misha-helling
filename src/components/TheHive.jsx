@@ -1,17 +1,5 @@
-﻿import { useEffect, useRef, useState } from "react";
-
-const stats = [
-  { number: "250+", label: "emprendedoras" },
-  { number: "35", label: "eventos" },
-  { number: "8", label: "años" },
-];
-
-const communityImages = [
-  "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=700&auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=700&auto=format&fit=crop&q=80",
-];
+import { useEffect, useRef, useState } from "react";
+import { hiveStats, hiveImages, hiveQuote, hiveJoinUrl } from "../data/theHive";
 
 function useCountUp(target, duration = 2000, trigger) {
   const [count, setCount] = useState(0);
@@ -89,7 +77,7 @@ export default function TheHive() {
       {/* Top: hero image + headline */}
       <div style={{ position: "relative", height: "60vh", overflow: "hidden" }}>
         <img
-          src={communityImages[0]}
+          src={hiveImages[0]}
           alt="The Hive Community"
           style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.45) saturate(0.8)" }}
         />
@@ -178,7 +166,7 @@ export default function TheHive() {
         >
           La Comunidad
         </div>
-        {stats.map((s) => (
+        {hiveStats.map((s) => (
           <StatItem key={s.label} number={s.number} label={s.label} />
         ))}
       </div>
@@ -195,7 +183,7 @@ export default function TheHive() {
         {/* Large left image */}
         <div style={{ gridRow: "1 / 3", overflow: "hidden" }}>
           <img
-            src={communityImages[1]}
+            src={hiveImages[1]}
             alt="The Hive"
             style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
             onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
@@ -205,7 +193,7 @@ export default function TheHive() {
         {/* Top-right */}
         <div style={{ overflow: "hidden" }}>
           <img
-            src={communityImages[2]}
+            src={hiveImages[2]}
             alt="The Hive"
             style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
             onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
@@ -215,7 +203,7 @@ export default function TheHive() {
         {/* Top far-right */}
         <div style={{ overflow: "hidden" }}>
           <img
-            src={communityImages[3]}
+            src={hiveImages[3]}
             alt="The Hive"
             style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
             onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
@@ -233,7 +221,7 @@ export default function TheHive() {
           }}
         >
           <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontStyle: "italic", color: "var(--green-dark)", lineHeight: 1.6, marginBottom: "1.5rem" }}>
-            "Un espacio donde las mujeres se conectan, aprenden y se impulsan mutuamente hacia sus metas."
+            "{hiveQuote}"
           </p>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--tierra)" }}>
             — Misha Helling, Fundadora
@@ -257,7 +245,7 @@ export default function TheHive() {
             Bienvenida,<br />abejita.
           </h3>
           <a
-            href="https://www.facebook.com/share/19A5BtyR82/"
+            href={hiveJoinUrl}
             target="_blank"
             rel="noreferrer"
             style={{

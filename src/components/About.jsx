@@ -1,4 +1,6 @@
-﻿export default function About() {
+import { aboutData } from "../data/about";
+
+export default function About() {
   return (
     <section
       style={{
@@ -13,8 +15,8 @@
         {/* Left: image */}
         <div style={{ position: "relative" }}>
           <img
-            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=700&auto=format&fit=crop&q=80"
-            alt="Misha Helling"
+            src={aboutData.photo}
+            alt={aboutData.photoAlt}
             style={{ width: "100%", aspectRatio: "3/4", objectFit: "cover" }}
           />
           <div
@@ -33,7 +35,7 @@
         {/* Right: text */}
         <div>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--tierra)", marginBottom: "1rem" }}>
-            Sobre Misha
+            {aboutData.label}
           </p>
           <h2
             style={{
@@ -45,17 +47,20 @@
               marginBottom: "1.5rem",
             }}
           >
-            Vivir con propósito,<br />crear con pasión.
+            {aboutData.title}
           </h2>
           <div style={{ width: "40px", height: "1px", background: "var(--tierra)", marginBottom: "1.5rem" }} />
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--text)", marginBottom: "1rem", opacity: 0.85 }}>
-            Misha Helling es guatemalteca, emprendedora, escritora y jinete. Su vida es un mapa de pasiones que convergen: la disciplina del deporte ecuestre, el amor por los animales, el poder de las palabras y el deseo de impulsar a otras mujeres a alcanzar su máximo potencial.
-          </p>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--text)", opacity: 0.85 }}>
-            A través de sus distintos proyectos, ha construido un ecosistema de valor que refleja quién es: auténtica, comprometida y siempre en movimiento.
-          </p>
+          {aboutData.paragraphs.map((p, i) => (
+            <p
+              key={i}
+              style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--text)", marginBottom: "1rem", opacity: 0.85 }}
+            >
+              {p}
+            </p>
+          ))}
         </div>
       </div>
     </section>
   );
 }
+

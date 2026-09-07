@@ -1,11 +1,4 @@
-﻿const photos = [
-  { src: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&auto=format&fit=crop&q=80", tall: true },
-  { src: "https://images.unsplash.com/photo-1508175800969-525c72a047dd?w=900&auto=format&fit=crop&q=80", tall: false },
-  { src: "https://images.unsplash.com/photo-1553284965-0acf7b4f5e6a?w=900&auto=format&fit=crop&q=80", tall: false },
-  { src: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=900&auto=format&fit=crop&q=80", tall: true },
-  { src: "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=900&auto=format&fit=crop&q=80", tall: false },
-  { src: "https://images.unsplash.com/photo-1534438097545-a2c22c879b6d?w=900&auto=format&fit=crop&q=80", tall: false },
-];
+import { equitacionPhotos, equitacionQuote, equitacionDescription } from "../data/equitacion";
 
 export default function Equitacion() {
   return (
@@ -47,7 +40,7 @@ export default function Equitacion() {
             paddingBottom: "0.5rem",
           }}
         >
-          El deporte ecuestre como forma de vida. La comunicación silenciosa entre jinete y caballo, la paciencia, la disciplina y la elegancia que solo el tiempo y la dedicación logran construir.
+          {equitacionDescription}
         </p>
       </div>
 
@@ -60,7 +53,7 @@ export default function Equitacion() {
           gap: "1rem",
         }}
       >
-        {photos.map((p, i) => (
+        {equitacionPhotos.map((p, i) => (
           <div
             key={i}
             style={{
@@ -91,7 +84,7 @@ export default function Equitacion() {
       {/* Bottom quote */}
       <div style={{ padding: "4rem 4rem 0", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontStyle: "italic", color: "rgba(250,249,245,0.55)", fontWeight: 300, maxWidth: "600px", margin: "0 auto" }}>
-          "El caballo es un espejo del alma."
+          "{equitacionQuote}"
         </p>
       </div>
     </section>

@@ -1,9 +1,4 @@
-﻿const benefits = [
-  { icon: "🦴", title: "100% Natural", desc: "Ingredientes reales, sin procesados ni aditivos artificiales." },
-  { icon: "🐾", title: "Digestión Óptima", desc: "Fórmula diseñada para una digestión saludable y completa." },
-  { icon: "✨", title: "Pelaje Brillante", desc: "Nutrición que se refleja en el exterior de tu mascota." },
-  { icon: "❤️", title: "Asesoría Personalizada", desc: "Acompañamiento experto para la transición y el mantenimiento." },
-];
+import { barfBenefits, barfProducts, barfDescription, barfWhatsapp, barfHeroImage } from "../data/premiumBarf";
 
 export default function PremiumBarf() {
   return (
@@ -38,10 +33,10 @@ export default function PremiumBarf() {
             </h2>
             <div style={{ width: "40px", height: "2px", background: "#7B1A2A", margin: "1.5rem 0" }} />
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--text)", opacity: 0.75, maxWidth: "400px" }}>
-              Dieta B.A.R.F. — Biologically Appropriate Raw Food. Alimento 100% natural, crudo y balanceado para perros y gatos. Porque la salud de tu mascota empieza en el plato.
+              {barfDescription}
             </p>
             <a
-              href="https://wa.me/PFNEW7LIPIKHP1"
+              href={barfWhatsapp}
               target="_blank"
               rel="noreferrer"
               style={{
@@ -68,7 +63,7 @@ export default function PremiumBarf() {
           {/* Hero product image */}
           <div style={{ position: "relative" }}>
             <img
-              src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?w=700&auto=format&fit=crop&q=80"
+              src={barfHeroImage}
               alt="Premium Barf - Alimento natural para perros"
               style={{ width: "100%", aspectRatio: "4/5", objectFit: "cover" }}
             />
@@ -94,7 +89,7 @@ export default function PremiumBarf() {
 
         {/* Benefits grid */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2rem", borderTop: "1px solid var(--bg-secondary)", paddingTop: "3rem" }}>
-          {benefits.map((b) => (
+          {barfBenefits.map((b) => (
             <div key={b.title}>
               <div style={{ fontSize: "1.6rem", marginBottom: "0.8rem" }}>{b.icon}</div>
               <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", fontWeight: 500, color: "var(--text)", marginBottom: "0.4rem" }}>{b.title}</h3>
@@ -105,11 +100,7 @@ export default function PremiumBarf() {
 
         {/* Product row */}
         <div style={{ marginTop: "4rem", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
-          {[
-            { img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&auto=format&fit=crop&q=80", name: "Mix de Proteínas", desc: "Res, pollo y pavo en proporciones óptimas." },
-            { img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&auto=format&fit=crop&q=80", name: "Pack Cachorros", desc: "Nutrición balanceada para las primeras etapas de vida." },
-            { img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&auto=format&fit=crop&q=80", name: "BARF Felino", desc: "Fórmula especializada para gatos adultos." },
-          ].map((prod) => (
+          {barfProducts.map((prod) => (
             <div key={prod.name} style={{ overflow: "hidden", position: "relative" }}>
               <div style={{ overflow: "hidden" }}>
                 <img
