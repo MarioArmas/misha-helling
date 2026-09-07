@@ -1,4 +1,4 @@
-﻿// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────
 //  SECCIÓN: Libros
 //  Edita aquí el catálogo de libros de Misha
 // ─────────────────────────────────────────────
@@ -10,52 +10,31 @@
  * - year:     Año de publicación
  * - genre:    Género literario (aparece como badge de color)
  * - synopsis: Sinopsis corta
- * - link:     URL para comprar / ver el libro
+ * - link:     URL para comprar en Amazon
+ * - cta:      Texto del call to action de compra
  * - color:    Color de fondo del badge de género
  */
 export const books = [
   {
     title: "El Verano de mi Libertad",
-    cover:
-      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&auto=format&fit=crop&q=80",
-    year: "2023",
+    cover: "https://m.media-amazon.com/images/I/61BS9kQ1V3L._SY600_.jpg",
+    year: "2026",
     genre: "Novela",
     synopsis:
-      "Un viaje hacia la autenticidad, la libertad y el descubrimiento de una misma. Una historia que te recordará que nunca es tarde para empezar de nuevo.",
-    link: "#",
+      "A los dieciocho años, ella solo busca libertad. Pero un verano en una casa junto al lago trae consigo una complicación inesperada: un beso que no debería pasar. Una historia de coming-of-age sobre el valor de descubrirse a una misma y esa pregunta que lo cambia todo: ¿qué haces cuando lo que más quieres es justo lo que se supone que no puedes tener?",
+    link: "https://www.amazon.com/El-verano-mi-libertad-Spanish/dp/B0H9H5DJ1J/ref=sr_1_1?crid=2ZZPVYC2KSI51&dib=eyJ2IjoiMSJ9.OGtRMIsxkFzwPrbOthCEA0rYP3qmXZDREI_19N5y5bU.TsemgZEhJSs3BiT76Uq4G92NKnT3BH_H5ejICOJhH20&dib_tag=se&keywords=misha+helling&qid=1788755116&s=books&sprefix=misha+helling%2Cstripbooks-intl-ship%2C246&sr=1-1",
+    cta: "Comprar en Amazon →",
     color: "#C4956A",
   },
   {
-    title: "Entre Raíces",
-    cover:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500&auto=format&fit=crop&q=80",
-    year: "2021",
-    genre: "Ensayo",
-    synopsis:
-      "Reflexiones sobre identidad, pertenencia y el poder de conocer de dónde venimos para saber a dónde vamos.",
-    link: "#",
-    color: "#26382F",
-  },
-  {
-    title: "La Colmena Interior",
-    cover:
-      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500&auto=format&fit=crop&q=80",
-    year: "2020",
+    title: "Manual Sanando con la Magia",
+    cover: "https://m.media-amazon.com/images/I/41YMw3G7ktL._SY600_.jpg",
+    year: "2023",
     genre: "Desarrollo Personal",
     synopsis:
-      "Las lecciones que aprendió fundando The Hive: sobre liderazgo femenino, comunidad y la fuerza que nace de la unión.",
-    link: "#",
+      "Un manual para el autocuidado y la transformación personal. Porque la magia no es solo para quienes practican el ocultismo o poseen dones sobrenaturales, sino una herramienta accesible para cualquiera que busque un cambio de vida: cultivar el amor propio, manejar la ansiedad y la depresión, y manifestar deseos conectando con la naturaleza y la energía que nos rodea.",
+    link: "https://www.amazon.com/Manual-sanando-magia-autocuidado-transformaci%C3%B3n-ebook/dp/B0C25ZXS7M/ref=sr_1_2?crid=2ZZPVYC2KSI51&dib=eyJ2IjoiMSJ9.OGtRMIsxkFzwPrbOthCEA0rYP3qmXZDREI_19N5y5bU.TsemgZEhJSs3BiT76Uq4G92NKnT3BH_H5ejICOJhH20&dib_tag=se&keywords=misha+helling&qid=1788755116&s=books&sprefix=misha+helling%2Cstripbooks-intl-ship%2C246&sr=1-2",
+    cta: "Comprar en Amazon →",
     color: "#8A6A4A",
-  },
-  {
-    title: "Cuentos del Campo",
-    cover:
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=500&auto=format&fit=crop&q=80",
-    year: "2018",
-    genre: "Narrativa",
-    synopsis:
-      "Historias que nacieron en las caballerizas y los caminos de tierra. La vida rural vista con los ojos de quien ama cada detalle.",
-    link: "#",
-    color: "#66705F",
   },
 ];

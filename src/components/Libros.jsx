@@ -138,7 +138,7 @@ export default function Libros() {
                     transition: "border-color 0.3s",
                   }}
                 >
-                  Ver libro →
+                  {book.cta}
                 </a>
               </div>
             </div>
