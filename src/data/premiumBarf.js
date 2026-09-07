@@ -14,6 +14,9 @@ export const barfDescription =
 /** Link de WhatsApp para pedidos */
 export const barfWhatsapp = "https://wa.me/PFNEW7LIPIKHP1";
 
+/** Link de Instagram de la tienda */
+export const barfInstagram = "https://www.instagram.com/premiumbarfgt/";
+
 /**
  * Beneficios / pilares de la marca.
  * - icon: emoji o icono

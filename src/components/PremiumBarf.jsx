@@ -1,4 +1,5 @@
-import { barfBenefits, barfProducts, barfDescription, barfWhatsapp, barfHeroImage } from "../data/premiumBarf";
+import { barfBenefits, barfProducts, barfDescription, barfInstagram, barfHeroImage } from "../data/premiumBarf";
+import barfLogo from "../assets/premium-barf-logo.jpg";
 
 export default function PremiumBarf() {
   return (
@@ -36,7 +37,7 @@ export default function PremiumBarf() {
               {barfDescription}
             </p>
             <a
-              href={barfWhatsapp}
+              href={barfInstagram}
               target="_blank"
               rel="noreferrer"
               style={{
@@ -68,22 +69,19 @@ export default function PremiumBarf() {
               style={{ width: "100%", aspectRatio: "4/5", objectFit: "cover" }}
             />
             {/* Logo badge overlay */}
-            <div
+            <img
+              src={barfLogo}
+              alt="Premium Barf logo"
               style={{
                 position: "absolute",
                 top: "1.5rem",
                 right: "1.5rem",
-                background: "#7B1A2A",
-                color: "var(--white)",
-                padding: "0.6rem 1rem",
-                fontFamily: "var(--font-sans)",
-                fontSize: "0.65rem",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
+                width: "84px",
+                height: "84px",
+                borderRadius: "50%",
+                boxShadow: "0 6px 18px rgba(0,0,0,0.35)",
               }}
-            >
-              Real Food · True Health
-            </div>
+            />
           </div>
         </div>
 
