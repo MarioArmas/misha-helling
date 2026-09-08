@@ -77,23 +77,48 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* Equitación bento gallery: 3 equal-height columns, filled column by
-   column. Each column's item spans must add up to 5 rows so the bottom
-   edge stays flush (see src/data/equitacion.js). */
+/* Equitación bento gallery: a hand-drawn grid-template-areas layout (not a
+   repeating pattern) so tile shapes vary -- a big hero, tall verticals of
+   different heights, small square accents and wide horizontal banners.
+   Each area name below must match a "area" value in equitacion.js.
+   Row height is in cqw (% of the grid's own width, not the viewport) so
+   cells keep their proportions no matter how wide the monitor is -- vw
+   made columns grow much faster than row height on wide screens,
+   flattening tall photos. Desktop and tablet each get their own
+   hand-authored area map; both are built so every column's total row
+   count matches, which is what keeps the bottom edge flush. */
 .eq-masonry {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-flow: column;
-  grid-template-rows: repeat(5, clamp(150px, 18vw, 230px));
+  container-type: inline-size;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 17cqw);
   gap: 1rem;
+  grid-template-areas:
+    "rider rider elegant shadow"
+    "rider rider elegant ears"
+    "trio  trio  elegant ears"
+    "halter peek profile stable"
+    "halter peek profile stable"
+    "amargada amargada tongue stable";
 }
 
-.eq-tall {
-  grid-row: span 2;
-}
-
-.eq-small {
-  grid-row: span 1;
+@media (max-width: 1024px) {
+  .eq-masonry {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 33cqw);
+    grid-template-areas:
+      "trio trio"
+      "rider elegant"
+      "rider elegant"
+      "rider peek"
+      "amargada peek"
+      "amargada shadow"
+      "ears profile"
+      "ears profile"
+      "stable halter"
+      "stable halter"
+      "tongue tongue";
+  }
 }
 
 .hive-stats {
@@ -209,23 +234,21 @@
 
   .eq-masonry {
     grid-template-columns: 1fr !important;
-    grid-auto-flow: row !important;
     grid-template-rows: none !important;
+    grid-template-areas: none !important;
   }
 
-  .eq-tall,
-  .eq-small {
-    grid-row: auto !important;
+  .eq-item {
+    grid-area: auto !important;
   }
 
-  .eq-tall img {
-    aspect-ratio: 3 / 4 !important;
+  .eq-item img {
+    aspect-ratio: 4 / 5 !important;
     height: auto !important;
   }
 
-  .eq-small img {
+  .eq-compact img {
     aspect-ratio: 1 / 1 !important;
-    height: auto !important;
   }
 }
 

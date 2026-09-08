@@ -22,7 +22,7 @@ export default function Hero() {
     >
       {/* Background image via Unsplash placeholder */}
       <img
-        src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1800&auto=format&fit=crop&q=80"
+        src="/images/hero/main.jpg"
         alt="Misha Helling"
         style={{
           position: "absolute",
@@ -30,7 +30,7 @@ export default function Hero() {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          objectPosition: "center top",
+          objectPosition: "center",
           transform: loaded ? "scale(1)" : "scale(1.04)",
           transition: "transform 1.8s cubic-bezier(0.16, 1, 0.3, 1)",
         }}

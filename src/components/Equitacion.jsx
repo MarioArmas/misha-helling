@@ -50,8 +50,9 @@ export default function Equitacion() {
         {equitacionPhotos.map((p, i) => (
           <div
             key={i}
-            className={p.span === 2 ? "eq-item eq-tall" : "eq-item eq-small"}
+            className={p.compact ? "eq-item eq-compact" : "eq-item"}
             style={{
+              gridArea: p.area,
               overflow: "hidden",
               position: "relative",
             }}
