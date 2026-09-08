@@ -57,7 +57,7 @@ export default function PremiumBarf() {
               onMouseEnter={(e) => (e.currentTarget.style.background = "#5e1220")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "#7B1A2A")}
             >
-              Hacer un pedido →
+              Síguenos en Instagram →
             </a>
           </div>
 
