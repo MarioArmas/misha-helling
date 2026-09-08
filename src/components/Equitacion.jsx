@@ -45,32 +45,25 @@ export default function Equitacion() {
         </p>
       </div>
 
-      {/* Masonry gallery */}
-      <div
-        className="pad-h"
-        style={{
-          columns: "3 300px",
-          columnGap: "1rem",
-          gap: "1rem",
-        }}
-      >
+      {/* Bento gallery */}
+      <div className="pad-h eq-masonry">
         {equitacionPhotos.map((p, i) => (
           <div
             key={i}
+            className={p.span === 2 ? "eq-item eq-tall" : "eq-item eq-small"}
             style={{
-              breakInside: "avoid",
-              marginBottom: "1rem",
               overflow: "hidden",
               position: "relative",
             }}
           >
             <img
               src={p.src}
-              alt={`Doma ${i + 1}`}
+              alt={p.alt}
               style={{
                 width: "100%",
-                aspectRatio: p.tall ? "3/4" : "4/3",
+                height: "100%",
                 objectFit: "cover",
+                objectPosition: p.focus || "center",
                 display: "block",
                 transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)",
                 filter: "saturate(0.85) contrast(1.05)",

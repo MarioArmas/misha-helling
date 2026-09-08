@@ -77,6 +77,25 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* Equitación bento gallery: 3 equal-height columns, filled column by
+   column. Each column's item spans must add up to 5 rows so the bottom
+   edge stays flush (see src/data/equitacion.js). */
+.eq-masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, clamp(150px, 18vw, 230px));
+  gap: 1rem;
+}
+
+.eq-tall {
+  grid-row: span 2;
+}
+
+.eq-small {
+  grid-row: span 1;
+}
+
 .hive-stats {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -186,6 +205,27 @@
   .hive-photo-main {
     grid-row: auto !important;
     height: 60vw;
+  }
+
+  .eq-masonry {
+    grid-template-columns: 1fr !important;
+    grid-auto-flow: row !important;
+    grid-template-rows: none !important;
+  }
+
+  .eq-tall,
+  .eq-small {
+    grid-row: auto !important;
+  }
+
+  .eq-tall img {
+    aspect-ratio: 3 / 4 !important;
+    height: auto !important;
+  }
+
+  .eq-small img {
+    aspect-ratio: 1 / 1 !important;
+    height: auto !important;
   }
 }
 
