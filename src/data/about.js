@@ -5,7 +5,7 @@
 
 export const aboutData = {
   /** Foto de perfil / presentación */
-  photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=700&auto=format&fit=crop&q=80",
+  photo: "/images/hero/photo.jpg",
   photoAlt: "Misha Helling",
 
   /** Etiqueta pequeña encima del título */
