@@ -14,14 +14,14 @@ export default function Libros() {
   return (
     <section
       id="libros"
+      className="section-pad-v"
       style={{
         background: "var(--bg-secondary)",
-        padding: "8rem 0",
         overflow: "hidden",
       }}
     >
       {/* Header */}
-      <div style={{ padding: "0 4rem", marginBottom: "3.5rem", display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
+      <div className="pad-h flex-header" style={{ marginBottom: "3.5rem", display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
         <div>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--tierra)", marginBottom: "0.8rem" }}>
             03 — Literatura
@@ -72,10 +72,10 @@ export default function Libros() {
       {/* Horizontal scroll track */}
       <div
         ref={trackRef}
+        className="pad-h"
         style={{
           display: "flex",
           gap: "2rem",
-          padding: "0 4rem",
           overflowX: "auto",
           scrollSnapType: "x mandatory",
           WebkitOverflowScrolling: "touch",

@@ -3,15 +3,15 @@ import { aboutData } from "../data/about";
 export default function About() {
   return (
     <section
+      className="section-pad"
       style={{
         background: "var(--bg-primary)",
-        padding: "8rem 4rem",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
-      <div style={{ maxWidth: "920px", width: "100%", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6rem", alignItems: "center" }}>
+      <div className="grid-2" style={{ maxWidth: "920px", width: "100%", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6rem", alignItems: "center" }}>
         {/* Left: image */}
         <div style={{ position: "relative" }}>
           <img

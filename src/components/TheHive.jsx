@@ -75,7 +75,7 @@ export default function TheHive() {
       }}
     >
       {/* Top: hero image + headline */}
-      <div style={{ position: "relative", height: "60vh", overflow: "hidden" }}>
+      <div className="hive-hero" style={{ position: "relative", height: "60vh", overflow: "hidden" }}>
         <img
           src={hiveImages[0]}
           alt="The Hive Community"
@@ -141,9 +141,10 @@ export default function TheHive() {
 
       {/* Stats */}
       <div
+        className="hive-stats pad-h"
         style={{
           background: "var(--green-dark)",
-          padding: "5rem 4rem",
+          paddingBlock: "5rem",
           display: "grid",
           gridTemplateColumns: "repeat(3,1fr)",
           gap: "2rem",
@@ -173,6 +174,7 @@ export default function TheHive() {
 
       {/* Photo grid */}
       <div
+        className="hive-photo-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr 1fr",
@@ -181,7 +183,7 @@ export default function TheHive() {
         }}
       >
         {/* Large left image */}
-        <div style={{ gridRow: "1 / 3", overflow: "hidden" }}>
+        <div className="hive-photo-main" style={{ gridRow: "1 / 3", overflow: "hidden" }}>
           <img
             src={hiveImages[1]}
             alt="The Hive"

@@ -13,13 +13,16 @@ const socials = [
 export default function Footer() {
   return (
     <footer
+      className="pad-h"
       style={{
         background: "var(--green-dark)",
-        padding: "5rem 4rem 3rem",
+        paddingTop: "5rem",
+        paddingBottom: "3rem",
         color: "var(--white)",
       }}
     >
       <div
+        className="footer-grid"
         style={{
           maxWidth: "1100px",
           margin: "0 auto",
@@ -87,7 +90,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div className="footer-copyright" style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: "rgba(250,249,245,0.3)" }}>
           © 2025 Misha Helling. Todos los derechos reservados.
         </p>

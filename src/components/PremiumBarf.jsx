@@ -5,9 +5,9 @@ export default function PremiumBarf() {
   return (
     <section
       id="barf"
+      className="section-pad"
       style={{
         background: "var(--white)",
-        padding: "8rem 4rem",
       }}
     >
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
@@ -17,7 +17,7 @@ export default function PremiumBarf() {
         </p>
 
         {/* Split header */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "flex-start", marginBottom: "5rem" }}>
+        <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "flex-start", marginBottom: "5rem" }}>
           <div>
             <h2
               style={{
@@ -86,7 +86,7 @@ export default function PremiumBarf() {
         </div>
 
         {/* Benefits grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2rem", borderTop: "1px solid var(--bg-secondary)", paddingTop: "3rem" }}>
+        <div className="grid-4" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2rem", borderTop: "1px solid var(--bg-secondary)", paddingTop: "3rem" }}>
           {barfBenefits.map((b) => (
             <div key={b.title}>
               <div style={{ fontSize: "1.6rem", marginBottom: "0.8rem" }}>{b.icon}</div>
@@ -97,7 +97,7 @@ export default function PremiumBarf() {
         </div>
 
         {/* Product row */}
-        <div style={{ marginTop: "4rem", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
+        <div className="grid-3" style={{ marginTop: "4rem", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
           {barfProducts.map((prod) => (
             <div key={prod.name} style={{ overflow: "hidden", position: "relative" }}>
               <div style={{ overflow: "hidden" }}>

@@ -4,14 +4,14 @@ export default function Equitacion() {
   return (
     <section
       id="equitacion"
+      className="section-pad-v"
       style={{
         background: "var(--green-dark)",
-        padding: "8rem 0",
         overflow: "hidden",
       }}
     >
       {/* Header */}
-      <div style={{ padding: "0 4rem", marginBottom: "4rem", display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
+      <div className="pad-h flex-header" style={{ marginBottom: "4rem", display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
         <div>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(250,249,245,0.5)", marginBottom: "0.8rem" }}>
             01 — Disciplina
@@ -31,6 +31,7 @@ export default function Equitacion() {
           </h2>
         </div>
         <p
+          className="flex-header-desc"
           style={{
             fontFamily: "var(--font-sans)",
             fontSize: "0.9rem",
@@ -46,8 +47,8 @@ export default function Equitacion() {
 
       {/* Masonry gallery */}
       <div
+        className="pad-h"
         style={{
-          padding: "0 4rem",
           columns: "3 300px",
           columnGap: "1rem",
           gap: "1rem",
@@ -82,7 +83,7 @@ export default function Equitacion() {
       </div>
 
       {/* Bottom quote */}
-      <div style={{ padding: "4rem 4rem 0", textAlign: "center" }}>
+      <div className="pad-h" style={{ paddingTop: "4rem", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontStyle: "italic", color: "rgba(250,249,245,0.55)", fontWeight: 300, maxWidth: "600px", margin: "0 auto" }}>
           "{equitacionQuote}"
         </p>

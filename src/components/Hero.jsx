@@ -48,10 +48,10 @@ export default function Hero() {
 
       {/* Content */}
       <div
+        className="hero-content"
         style={{
           position: "relative",
           zIndex: 2,
-          padding: "0 4rem 6rem",
           maxWidth: "900px",
           opacity: loaded ? 1 : 0,
           transform: loaded ? "translateY(0)" : "translateY(28px)",
@@ -106,10 +106,10 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div
+        className="hero-scroll-indicator"
         style={{
           position: "absolute",
           bottom: "2.5rem",
-          right: "3rem",
           zIndex: 2,
           display: "flex",
           flexDirection: "column",
