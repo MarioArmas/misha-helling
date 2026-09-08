@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { hiveStats, hiveImages, hiveQuote, hiveJoinUrl } from "../data/theHive";
+import { hiveStats, hiveImages, hiveQuote, hiveJoinUrl, hiveInstagramUrl } from "../data/theHive";
+import theHiveLogo from "../assets/the-hive-logo.jpg";
 
 function useCountUp(target, duration = 2000, trigger) {
   const [count, setCount] = useState(0);
@@ -96,7 +97,7 @@ export default function TheHive() {
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(250,249,245,0.5)", marginBottom: "1rem" }}>
             04 — Comunidad
           </p>
-          {/* Bee logo circle */}
+          {/* Logo de la comunidad */}
           <div
             style={{
               width: "64px",
@@ -107,10 +108,15 @@ export default function TheHive() {
               alignItems: "center",
               justifyContent: "center",
               marginBottom: "1.5rem",
-              fontSize: "1.8rem",
+              overflow: "hidden",
+              background: "var(--white)",
             }}
           >
-            🐝
+            <img
+              src={theHiveLogo}
+              alt="The Hive"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
           </div>
           <h2
             style={{
@@ -183,11 +189,11 @@ export default function TheHive() {
         }}
       >
         {/* Large left image */}
-        <div className="hive-photo-main" style={{ gridRow: "1 / 3", overflow: "hidden" }}>
+        <div className="hive-photo-main" style={{ gridRow: "1 / 3", position: "relative", overflow: "hidden" }}>
           <img
             src={hiveImages[1]}
             alt="The Hive"
-            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
             onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
             onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
           />
@@ -246,25 +252,46 @@ export default function TheHive() {
           <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.6rem", fontWeight: 400, color: "var(--white)", marginBottom: "1.5rem", lineHeight: 1.2 }}>
             Bienvenida,<br />abejita.
           </h3>
-          <a
-            href={hiveJoinUrl}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: "0.78rem",
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              color: "var(--white)",
-              borderBottom: "1px solid rgba(250,249,245,0.5)",
-              paddingBottom: "0.2rem",
-              transition: "border-color 0.3s",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--white)")}
-            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(250,249,245,0.5)")}
-          >
-            Unirme ahora →
-          </a>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem" }}>
+            <a
+              href={hiveJoinUrl}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "0.78rem",
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                color: "var(--white)",
+                borderBottom: "1px solid rgba(250,249,245,0.5)",
+                paddingBottom: "0.2rem",
+                transition: "border-color 0.3s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--white)")}
+              onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(250,249,245,0.5)")}
+            >
+              Únete en Facebook →
+            </a>
+            <a
+              href={hiveInstagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "0.78rem",
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                color: "var(--white)",
+                borderBottom: "1px solid rgba(250,249,245,0.5)",
+                paddingBottom: "0.2rem",
+                transition: "border-color 0.3s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--white)")}
+              onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(250,249,245,0.5)")}
+            >
+              Síguenos en Instagram →
+            </a>
+          </div>
         </div>
       </div>
     </section>
