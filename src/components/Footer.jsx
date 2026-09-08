@@ -7,7 +7,7 @@ const links = [
 
 const socials = [
   { label: "Instagram", href: "https://instagram.com/misha_helling" },
-  { label: "Facebook", href: "https://www.facebook.com/share/19A5BtyR82/" },
+  { label: "Facebook", href: "https://www.facebook.com/mishamhelling" },
 ];
 
 export default function Footer() {
