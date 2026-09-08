@@ -59,7 +59,7 @@ export const equitacionPhotos = [
   },
   {
     src: "/images/horses/horses-07.jpg",
-    area: "amargada",
+    area: "profile",
     alt: "Retrato en blanco y negro de jinete y caballo",
   },
   {
@@ -76,7 +76,7 @@ export const equitacionPhotos = [
   },
   {
     src: "/images/horses/horses-02.jpg",
-    area: "profile",
+    area: "amargada",
     alt: "Perfil de caballo blanco con crin larga",
   },
 ];
