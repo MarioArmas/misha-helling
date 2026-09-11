@@ -1,4 +1,4 @@
-// ─────────────────────────────────────────────
+﻿// ─────────────────────────────────────────────
 //  SECCIÓN: The Hive
 //  Edita aquí los stats, imágenes y links de la comunidad
 // ─────────────────────────────────────────────
@@ -12,7 +12,7 @@
 export const hiveStats = [
   { number: "250+", label: "emprendedoras" },
   { number: "35",   label: "eventos" },
-  { number: "2",    label: "años" },
+  { number: "1",    label: "años" },
 ];
 
 /**
