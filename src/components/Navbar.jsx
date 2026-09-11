@@ -1,4 +1,4 @@
-﻿import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState, useEffect } from "react";
 
 const navLinks = [
   { label: "Equitación", href: "#equitacion" },
