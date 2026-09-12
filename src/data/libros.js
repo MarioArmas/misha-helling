@@ -10,9 +10,10 @@
  * - year:     Año de publicación
  * - genre:    Género literario (aparece como badge de color)
  * - synopsis: Sinopsis corta
- * - link:     URL para comprar en Amazon
- * - cta:      Texto del call to action de compra
+ * - link:     URL para comprar (usada en el overlay de la portada)
+ * - cta:      Texto del call to action de compra del overlay
  * - color:    Color de fondo del badge de género
+ * - vendors:  (opcional) Lista de librerías/tiendas donde se consigue { name, url }
  */
 export const books = [
   {
@@ -25,6 +26,13 @@ export const books = [
     link: "https://www.amazon.com/El-verano-mi-libertad-Spanish/dp/B0H9H5DJ1J/ref=sr_1_1?crid=2ZZPVYC2KSI51&dib=eyJ2IjoiMSJ9.OGtRMIsxkFzwPrbOthCEA0rYP3qmXZDREI_19N5y5bU.TsemgZEhJSs3BiT76Uq4G92NKnT3BH_H5ejICOJhH20&dib_tag=se&keywords=misha+helling&qid=1788755116&s=books&sprefix=misha+helling%2Cstripbooks-intl-ship%2C246&sr=1-1",
     cta: "Comprar en Amazon →",
     color: "#C4956A",
+    vendors: [
+      { name: "Amazon", url: "https://www.amazon.com/El-verano-mi-libertad-Spanish/dp/B0H9H5DJ1J/ref=sr_1_1?crid=2ZZPVYC2KSI51&dib=eyJ2IjoiMSJ9.OGtRMIsxkFzwPrbOthCEA0rYP3qmXZDREI_19N5y5bU.TsemgZEhJSs3BiT76Uq4G92NKnT3BH_H5ejICOJhH20&dib_tag=se&keywords=misha+helling&qid=1788755116&s=books&sprefix=misha+helling%2Cstripbooks-intl-ship%2C246&sr=1-1" },
+      { name: "Sophos", url: "https://tienda.sophosenlinea.com/libro/el-verano-de-mi-libertad_360481" },
+      { name: "Antigua Books", url: "https://www.instagram.com/antiguabooks/?hl=es-la" },
+      { name: "Sun and Paper", url: "https://www.instagram.com/sunandpaper/?hl=es" },
+      { name: "Kishibooks", url: "https://kishibooksgt.com" },
+    ],
   },
   {
     title: "Manual Sanando con la Magia",

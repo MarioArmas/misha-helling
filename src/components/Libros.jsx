@@ -163,6 +163,47 @@ export default function Libros() {
               </div>
               <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.3rem", fontWeight: 500, color: "var(--text)", marginBottom: "0.5rem" }}>{book.title}</h3>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.84rem", lineHeight: 1.75, color: "var(--text)", opacity: 0.65 }}>{book.synopsis}</p>
+
+              {book.vendors && book.vendors.length > 0 && (
+                <div style={{ marginTop: "1.2rem", paddingTop: "1.1rem", borderTop: "1px solid var(--text)", borderTopColor: "rgba(0,0,0,0.08)" }}>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-sans)",
+                      fontSize: "0.62rem",
+                      letterSpacing: "0.2em",
+                      textTransform: "uppercase",
+                      color: "var(--text)",
+                      opacity: 0.45,
+                      marginBottom: "0.7rem",
+                    }}
+                  >
+                    Disponible en
+                  </p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+                    {book.vendors.map((vendor) => (
+                      <a
+                        key={vendor.name}
+                        href={vendor.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{
+                          fontFamily: "var(--font-sans)",
+                          fontSize: "0.7rem",
+                          letterSpacing: "0.03em",
+                          color: "var(--text)",
+                          border: "1px solid var(--green-dark)",
+                          padding: "0.35rem 0.75rem",
+                          transition: "background 0.25s, color 0.25s",
+                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.background = "var(--green-dark)"; e.currentTarget.style.color = "var(--white)"; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--text)"; }}
+                      >
+                        {vendor.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         ))}
