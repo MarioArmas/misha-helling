@@ -80,6 +80,8 @@ export default function TheHive() {
         <img
           src={hiveImages[0]}
           alt="The Hive Community"
+          loading="lazy"
+          decoding="async"
           style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.45) saturate(0.8)" }}
         />
         <div
@@ -115,6 +117,8 @@ export default function TheHive() {
             <img
               src={theHiveLogo}
               alt="The Hive"
+              loading="lazy"
+              decoding="async"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
@@ -193,6 +197,8 @@ export default function TheHive() {
           <img
             src={hiveImages[1]}
             alt="The Hive"
+            loading="lazy"
+            decoding="async"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
             onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
             onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
@@ -203,6 +209,8 @@ export default function TheHive() {
           <img
             src={hiveImages[2]}
             alt="The Hive"
+            loading="lazy"
+            decoding="async"
             style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
             onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
             onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
@@ -213,6 +221,8 @@ export default function TheHive() {
           <img
             src={hiveImages[3]}
             alt="The Hive"
+            loading="lazy"
+            decoding="async"
             style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
             onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
             onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}

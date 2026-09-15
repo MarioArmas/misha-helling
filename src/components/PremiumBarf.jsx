@@ -66,12 +66,16 @@ export default function PremiumBarf() {
             <img
               src={barfHeroImage}
               alt="Premium Barf - Alimento natural para perros"
+              loading="lazy"
+              decoding="async"
               style={{ width: "100%", aspectRatio: "4/5", objectFit: "cover" }}
             />
             {/* Logo badge overlay */}
             <img
               src={barfLogo}
               alt="Premium Barf logo"
+              loading="lazy"
+              decoding="async"
               style={{
                 position: "absolute",
                 top: "1.5rem",
@@ -104,6 +108,8 @@ export default function PremiumBarf() {
                 <img
                   src={prod.img}
                   alt={prod.name}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: "100%",
                     aspectRatio: "4/3",

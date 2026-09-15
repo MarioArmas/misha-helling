@@ -100,6 +100,8 @@ export default function Libros() {
               <img
                 src={book.cover}
                 alt={book.title}
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: "100%",
                   aspectRatio: "2/3",

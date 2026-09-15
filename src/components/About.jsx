@@ -17,6 +17,8 @@ export default function About() {
           <img
             src={aboutData.photo}
             alt={aboutData.photoAlt}
+            loading="lazy"
+            decoding="async"
             style={{ width: "100%", aspectRatio: "3/4", objectFit: "cover" }}
           />
           <div

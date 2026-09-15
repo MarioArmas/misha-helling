@@ -60,6 +60,8 @@ export default function Equitacion() {
             <img
               src={p.src}
               alt={p.alt}
+              loading="lazy"
+              decoding="async"
               style={{
                 width: "100%",
                 height: "100%",
