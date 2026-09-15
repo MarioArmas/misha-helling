@@ -89,27 +89,27 @@ export const eventPress = [
 export const eventSocial = [
   {
     outlet: "Instagram",
-    desc: "Publicación del lanzamiento",
+    desc: "Misha anuncia la publicación de su primera novela",
     url: "https://www.instagram.com/p/DcgZ8I3nBpA/?igsi=dWk0dDU4OHg3c3J5",
   },
   {
     outlet: "Instagram",
-    desc: "Publicación del lanzamiento",
+    desc: "Fotos del día del lanzamiento",
     url: "https://www.instagram.com/p/DcXhLDzFlgH/?igsi=MTVmMngyam85MWcwYw%3D%3D",
   },
   {
-    outlet: "Facebook",
-    desc: "Publicación del lanzamiento",
+    outlet: "Panorama Informativo GT",
+    desc: "Anuncio del lanzamiento del libro",
     url: "https://www.facebook.com/story.php?story_fbid=122116382367372679&id=61591180383928&rdid=rQfLNsDgb1F6Gs39",
   },
   {
-    outlet: "Facebook",
-    desc: "Publicación del lanzamiento",
+    outlet: "Explosión Guate",
+    desc: "Nota sobre su debut como novelista",
     url: "https://www.facebook.com/story.php?story_fbid=1369006022015367&id=100067179451483&rdid=gseecwivGcnteqFE",
   },
   {
-    outlet: "Facebook",
-    desc: "Publicación del lanzamiento",
+    outlet: "MÁS TV",
+    desc: "Presentación en el segmento de cultura",
     url: "https://www.facebook.com/story.php?story_fbid=1386805943643588&id=100069425851971&rdid=VpXVgN1cSsk10VGB",
   },
   {
