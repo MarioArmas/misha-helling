@@ -5,6 +5,7 @@ import About from "./components/About";
 import Equitacion from "./components/Equitacion";
 import PremiumBarf from "./components/PremiumBarf";
 import Libros from "./components/Libros";
+import BookEvent from "./components/BookEvent";
 import TheHive from "./components/TheHive";
 import Footer from "./components/Footer";
 
@@ -17,6 +18,7 @@ function App() {
       <Equitacion />
       <PremiumBarf />
       <Libros />
+      <BookEvent />
       <TheHive />
       <Footer />
     </div>

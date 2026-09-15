@@ -97,7 +97,7 @@ export default function TheHive() {
           }}
         >
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(250,249,245,0.5)", marginBottom: "1rem" }}>
-            04 — Comunidad
+            05 — Comunidad
           </p>
           {/* Logo de la comunidad */}
           <div
